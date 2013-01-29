@@ -1,0 +1,30 @@
+{
+  "providing": {
+  },
+  "recommendations": {
+  },
+  "suggestions": {
+  },
+  "maintainer_email": "YOUR_EMAIL",
+  "version": "0.0.1",
+  "maintainer": "YOUR_COMPANY_NAME",
+  "groupings": {
+  },
+  "replacing": {
+  },
+  "attributes": {
+  },
+  "license": "All rights reserved",
+  "conflicting": {
+  },
+  "dependencies": {
+  },
+  "platforms": {
+  },
+  "long_description": "Description\n===========\n\nRequirements\n============\n\nAttributes\n==========\n\nUsage\n=====\n\n",
+  "description": "Installs/Configures splunk",
+  "recipes": {
+    "splunk::default": "Installs splunk from a tar file, as well as the package ‘tree’"
+  },
+  "name": "splunk"
+}
