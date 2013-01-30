@@ -42,20 +42,22 @@ bash "install_splunk" do
     EOH
 end 
 
-cookbook_file "/opt/splunk/etc/system/splunk_cde.tgz" do
-  source "splunk_cde.tgz"
+templates "/opt/splunk/etc/system/local/inputs.conf" do
+  source "inputs.conf.erb"
   mode 0755
-  owner "root"
+  owner "splunk"
   group "root"
+  action :create
 end
 
-bash "install_splunk_cde" do
-  cwd "/opt/splunk/etc/system/"
-    code <<-EOH
-     tar -zxvf splunk_cde.tgz
-     chown -R splunk local
-     EOH
+templates "/opt/splunk/etc/system/local/web.conf" do
+  source "web.conf.erb"
+  mode 0755
+  owner "splunk"
+  group "root"
+  action :create
 end
+
 
 package "tree"
 
