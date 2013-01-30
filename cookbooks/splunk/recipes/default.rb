@@ -48,6 +48,13 @@ cookbook_file "/opt/splunk/etc/system/splunk_cde.tgz" do
   owner "root"
   group "root"
 end
-        
+
+bash "install_splunk" do
+  cwd "/opt/splunk/etc/system/"
+    code <<-EOH
+     tar -zxvf splunk_cde.tgz
+     EOH
+end
+
 package "tree"
 
