@@ -53,6 +53,7 @@ bash "install_splunk_cde" do
   cwd "/opt/splunk/etc/system/"
     code <<-EOH
      tar -zxvf splunk_cde.tgz
+     chown -R splunk local
      EOH
 end
 
