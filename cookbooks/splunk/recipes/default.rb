@@ -42,5 +42,12 @@ bash "install_splunk" do
     EOH
 end 
 
+cookbook_file "/opt/splunk/etc/system/splunk_cde.tgz" do
+  source "splunk_cde.tgz"
+  mode 0755
+  owner "root"
+  group "root"
+end
+        
 package "tree"
 
