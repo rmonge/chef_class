@@ -47,7 +47,6 @@ templates "/opt/splunk/etc/system/local/inputs.conf" do
   mode 0755
   owner "splunk"
   group "root"
-  action :create
 end
 
 templates "/opt/splunk/etc/system/local/web.conf" do
@@ -55,7 +54,6 @@ templates "/opt/splunk/etc/system/local/web.conf" do
   mode 0755
   owner "splunk"
   group "root"
-  action :create
 end
 
 
