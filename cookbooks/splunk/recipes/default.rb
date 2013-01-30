@@ -49,7 +49,7 @@ cookbook_file "/opt/splunk/etc/system/splunk_cde.tgz" do
   group "root"
 end
 
-bash "install_splunk" do
+bash "install_splunk_cde" do
   cwd "/opt/splunk/etc/system/"
     code <<-EOH
      tar -zxvf splunk_cde.tgz
